@@ -1,53 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Dynamic Team Page</title>
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
-   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
+<header>
+  <h1>Dynamic Team Page</h1>
+</header>
+
 <body style="background-image: url('/image/bg.jpg');">
-	
-  
-  <header>
-		<h1>Dynamic Team Page</h1>
-	</header>
+  <div class="container">
+    <p class="topText">MEET OUR TEAM</p>
+    <!-- <p class="subText">Click on Member to reveal more about them!</p> -->
+    <div class="selectSection">
+      <div>
+        <button type="button" data-number="1" class="tablinks" onclick="openTeam(event, 'Jack')">
+          <div class="team-member">
+            <img src="/image/profile_1.png" alt="Member 1">
+            <h2>Jack Waters</h2>
+            <p>Web Developer</p>
+            <p>"Crafting pixel-perfect and user-friendly websites is my passion. With years of experience in web
+              development, I specialize in turning ideas into stunning online experiences that are both functional and
+              visually appealing."</p>
+            <p class="mybtn">Learn More</p>
 
-  
-	<div class="team-container">
-		<div class="team-member">
-			<img src="/image/profile_1.png" alt="Person 1">
-			<h2>Jack Waters</h2>
-			<p>Web Developer</p>
-			<p>Jack is a highly skilled web developer with over 7 months of experience in building responsive and dynamic web applications.
-                 He specializes in HTML, CSS <span id="dots">...</span>
-                 <span id="more">
-                  JavaScript. He has worked with a wide range of clients, from startups to large enterprises, delivering high-quality and efficient web 
-                 solutions. In his free time, he enjoys playing guitar and exploring new skills. </span> </p>
-                 <button onclick="myFunction()" id="myBtn">Read More</button>
+          </div>
+        </button>
+      </div>
 
-                 <div class="learn-more">
-                    <a href="member_1.html">Learn More</a>
-                  </div>
-		</div>
+      <button type="button" data-number="2" class="tablinks" onclick="openTeam(event, 'Sahil')">
+        <div class="team-member">
+          <img src="/image/profile_2.png" alt="Member 2">
+          <h2>Sahil Gosaliya</h2>
+          <p>Web Designer</p>
+          <p>"I am a creative problem-solver who thrives on designing beautiful and intuitive websites. With a keen eye
+            for detail and a passion for user experience, I create visually stunning designs that engage and captivate
+            audiences." </p>
+          <p class="mybtn1">Learn More</p>
 
-		<div class="team-member">
-			<img src="/image/profile_2.png" alt="Person 2">
-			<h2>Sahilkumar Gosaliya</h2>
-			<p> Web Designer</p>
-			<p>Sahil is a talented web designer with over 5 months of experience in creating visually appealing and user-friendly websites.
-             He has a keen eye for design <span id="dots1">...</span>
-             <span id="more1">
-            and can create stunning graphics, logos, and layouts that perfectly match the client's brand and vision.
-              Sahil is proficient in Adobe Creative Suite, Sketch to create seamless user experiences. 
-              In his free time, he enjoys painting.</span></p>
-              <button onclick="myFunction1()" id="myBtn1">Read More</button>
+        </div>
+      </button>
 
-              <div class="learn-more">
-                <a href="member_2.html">Learn More</a>
-              </div>
-		</div>
-	</div>
+      <button type="button" data-number="3" class="tablinks" onclick="openTeam(event, 'Ryan')">
+        <div class="team-member">
+          <img src="/image/profile_3.png" alt="Member 3">
+          <h2>Ryan Rillet</h2>
+          <p>Content Writer</p>
+          <p>"As a skilled content writer, I bring ideas to life through compelling storytelling and engaging copy. With
+            a deep understanding of audience and purpose, I craft content that informs, entertains, and drives results."
+          </p>
+          <p class="mybtn2">Learn More</p>
+
+        </div>
+      </button>
+    </div>
+
+    <div class="contentSection">
+      <div id="Jack" class="content tabcontent" data-number="1">
+        <div class="accordion">
+          <div class="item">
+            <p class="number">01</p>
+            <p class="text">About Myself</p>
+
+            <div class="hidden-box">
+              <p>
+                As a web developer, I am passionate about creating engaging and user-friendly websites that provide a
+                seamless browsing experience. I am constantly expanding my knowledge of the latest front-end and
+                back-end technologies to stay ahead of the curve and ensure my projects are built to the highest
+                standard. I am a team player with excellent communication skills and a strong work ethic, always
+                striving to exceed expectations and deliver projects on time and within budget.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="number">02</p>
+            <p class="text">Experience</p>
+
+            <div class="hidden-box">
+
+              <ul>
+                <li>Developed responsive and mobile-friendly websites using HTML, CSS, and JavaScript</li>
+                <li>
+                  Built web applications using React and Angular, utilizing APIs to integrate with back-end systems
+                </li>
+                <li>
+                  Collaborated with designers to ensure pixel-perfect implementation of UI designs </li>
+                <li>Utilized Git for version control and collaboration with team members
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="number">03</p>
+            <p class="text">Skills</p>
+
+            <div class="hidden-box">
+
+              <ul>
+                <li>Strong problem-solving skills and attention to detail</li>
+                <li>
+                  Familiarity with version control systems like Git
+                </li>
+                <li>
+                  Suscipit, iure culpa reprehenderit aspernatur placeat quaerat.
+                </li>
+                <li>Strong problem-solving skills and attention to detail</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div id="Sahil" class="content tabcontent" data-number="2">
+        <div class="accordion">
+          <div class="item">
+            <p class="number">01</p>
+            <p class="text">Bio</p>
+            <div class="hidden-box">
+              <p>
+                As a web designer, I am passionate about creating engaging and user-friendly designs that help
+                businesses achieve their goals. With experience in designing for various industries, I am able to
+                understand the unique needs of each project and tailor my designs accordingly. I am always striving to
+                stay up-to-date with the latest design trends and technologies to ensure that my designs are both
+                visually appealing and functional.
+
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="number">02</p>
+            <p class="text">Hobbies</p>
+            <div class="hidden-box">
+
+              <ul>
+                <li>Sketching and drawing: This can help to develop an eye for design and improve the ability to create
+                  visually appealing layouts.</li>
+                <li>
+                  Photography: Having an eye for composition and lighting can be useful in selecting and editing images
+                  for websites.
+                </li>
+                <li>
+                  Reading and researching: Keeping up with the latest design trends and techniques, as well as industry
+                  news, can help you stay relevant and informed in work.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="number">03</p>
+            <p class="text">Portfolio</p>
+            <div class="hidden-box">
+              <ul>
+                <li>Created wireframes, mockups, and prototypes to illustrate design concepts and gather feedback from
+                  stakeholders.</li>
+                <li>
+                  Worked closely with clients to understand their requirements and create designs that aligned with
+                  their brand and business objectives.
+
+                </li>
+                <li>Designed and developed responsive websites for various clients, including e-commerce sites,
+                  corporate websites, and personal blogs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="Ryan" class="content tabcontent" data-number="3">
+        <div class="accordion">
+          <div class="item">
+            <p class="number">01</p>
+            <p class="text">Biography</p>
+            <div class="hidden-box">
+              <p>
+                As a content writer, I am passionate about crafting compelling and engaging content that captures the
+                reader's attention. I have a knack for understanding the needs of the target audience and tailoring
+                content to meet their needs. With a strong background in research and analysis, I am able to produce
+                high-quality content that is both informative and entertaining. Additionally, my understanding of SEO
+                and content marketing enables me to create content that not only educates but also drives traffic and
+                engagement.
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="number">02</p>
+            <p class="text">Knowledge</p>
+            <div class="hidden-box">
+
+              <ul>
+                <li>Exceptional writing and editing skills</li>
+                <li>
+                  Knowledge of content marketing and SEO strategies
+                </li>
+                <li>
+                  Understanding of social media and its impact on content creation
+                </li>
+                <li>Ability to write in different tones and styles for different audiences</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="item">
+            <p class="number">03</p>
+            <p class="text">Work Done</p>
+            <div class="hidden-box">
+              <ul>
+                <li>Developed and executed content strategies for various clients in diverse industries, such as
+                  healthcare, technology, and finance.</li>
+                <li>
+                  Conducted extensive research and analysis to create informative and engaging content for websites,
+                  blogs, and social media channels.
+                </li>
+                <li>
+                  Collaborated with design teams to create visually appealing and engaging content, such as infographics
+                  and videos.
+                </li>
+                <li>Edited and proofread content to ensure accuracy and consistency.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
-
 <script src="/java/main.js"></script>
+
+
 </html>
