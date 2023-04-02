@@ -1,56 +1,48 @@
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read More"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read Less"; 
-    moreText.style.display = "inline";
-  }
+/*To toggle the function between profiles */
+const buttons = document.querySelectorAll(".selectSection button");
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const active = document.querySelector(".active");
+    if (active) active.classList.remove("active");
+    button.classList.add("active");
+    const content = document.querySelectorAll('.content');
+    content.forEach(item => {
+      item.style.display = item.getAttribute('data-number') === button.getAttribute('data-number') ? "block" : "none";
+    });
+  });
+});
+
+
+
+
+const items = document.querySelectorAll(".item");
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", function () {
+    this.classList.toggle("open");
+  });
 }
 
 
-function myFunction1() {
-  var dots = document.getElementById("dots1");
-  var moreText = document.getElementById("more1");
-  var btnText = document.getElementById("myBtn1");
+/*To pop up more content */
+function openTeam(evt, teamName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-  if (dots1.style.display === "none") {
-    dots1.style.display = "inline";
-    btnText.innerHTML = "Read More"; 
-    moreText.style.display = "none";
-  } else {
-    dots1.style.display = "none";
-    btnText.innerHTML = "Read Less"; 
-    moreText.style.display = "inline";
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(teamName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
